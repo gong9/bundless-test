@@ -1,0 +1,60 @@
+{
+  "name": "my-library",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.32.5",
+  "description": "",
+  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/wobsoriano/my-library#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/my-library.git"
+  },
+  "bugs": "https://github.com/wobsoriano/my-library/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "require": "./dist/components/index.js",
+      "import": "./dist/components/index.mjs"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vite serve dev",
+    "dev:build": "vite build dev",
+    "dev:preview": "vite preview dev",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.4",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/tsconfig": "^0.4.0",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9",
+    "vue": "^3.3.4"
+  }
+}
