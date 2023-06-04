@@ -1,7 +1,7 @@
-import Card from './Card.vue'
-import Button from './Button.vue'
+import Card1 from './Card.vue'
+import Button1 from './Button.vue'
 
 export {
-  Card,
-  Button,
+  Card1,
+  Button1,
 }
